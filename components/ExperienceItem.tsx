@@ -2,7 +2,7 @@ import { Experience } from "@/types";
 
 type Props = { item: Experience };
 
-export default function ExperienceItem({ item }: Pros) {
+export default function ExperienceItem({ item }: Props) {
   const { company, role, team, start, end, bullets, link } = item;
   return (
     <li className="rounded-2xl ring-1 ring-black/10 dark:ring-white/10 p-4 sm:p-5">
