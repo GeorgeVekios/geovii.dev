@@ -9,3 +9,14 @@ export type Project = {
   image?: string;
   links?: ExternalLink[];
 }
+
+export type Experience = {
+  company: string;
+  role: string;
+  team?: string;
+  start: string;
+  end: string;
+  location?: string;
+  link?: string;
+  bullets: string[];
+};

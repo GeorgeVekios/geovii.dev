@@ -1,4 +1,5 @@
 export const site = {
+  headerName: "geovii",
   name: "George Vekios",
   tagline: "Building reliable, user-oriented software across the stack.",
   email: "georgevekios@gmail.com",
