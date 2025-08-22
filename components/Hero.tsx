@@ -29,19 +29,19 @@ export default function Hero(){
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/about"
-            className="inline-flex items-center rounded-full px4 py-2 text-sm font-medium bg-black text-white dark:bg-white dark:text-black hover:opacity-90 transition"
+            className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ring-1 ring-black/15 dark:ring-white/20 hover:bg-black/5 dark:hover:bg-white/5 transition"
           >
             About
           </Link>
           <Link
             href="/experience"
-            className="inline-flex items-center rounded-full px4 py-2 text-sm font-medium bg-black text-white dark:bg-white dark:text-black hover:opacity-90 transition"
+            className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ring-1 ring-black/15 dark:ring-white/20 hover:bg-black/5 dark:hover:bg-white/5 transition"
           >
             Experience
           </Link>
           <Link
             href="/projects"
-            className="inline-flex items-center rounded-full px4 py-2 text-sm font-medium bg-black text-white dark:bg-white dark:text-black hover:opacity-90 transition"
+            className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ring-1 ring-black/15 dark:ring-white/20 hover:bg-black/5 dark:hover:bg-white/5 transition"
           >
             Projects
           </Link>

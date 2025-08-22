@@ -7,7 +7,7 @@ export default function SocialLinks(){
         Email
       </a> {" "}
       -{" "}
-      <a className="hover: underline underline-offset-4" href={site.github} target = "_blank" rel="noopener noreferrer">
+      <a className="hover:underline underline-offset-4" href={site.github} target = "_blank" rel="noopener noreferrer">
         GitHub
       </a>{" "}
       -{" "}
