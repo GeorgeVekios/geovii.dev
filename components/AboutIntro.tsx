@@ -31,7 +31,7 @@ export default function AboutIntro() {
       </ul>
 
       <p> Quick Version:</p>
-      <div className="mt-4">{site.highlights}</div>
+      <div className="mt-4"></div>
       <p className="mt-6">
         You can reach me at{" "}
         <a
