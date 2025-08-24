@@ -6,11 +6,11 @@ export const projects: Project[] = [
     title: "Project PhyloDIVas",
     stack: ["ASP.NET Core MVC", "C#", "SQL", "AWS", "HTML/CSS/JS"],
     summary:
-      "Web-based phylogenetic analsis platform integraitng NBI Databank API using SQL caching and an AI assistant trained on local genomic data. Development beginning in the fall.",
+      "Web-based phylogenetic analysis platform integrating NCBI Databank API. Caches data via SQL. Features an AI assistant trained on local genomic data. Development beginning in the fall.",
     bullets:[
-      "Integrated NCBI API; cached results in SQL to minimize repeat queries.",
-      "Built an AI assistant for analsis prompts on local data.",
-      "Deployed to AWS; designed cloud data workflows."
+      "Integrating NCBI API; cached results in SQL to minimize repeat queries.",
+      "Training an AI assistant on local data to assist with analysis prompts.",
+      "Deploying to AWS; designed cloud data workflows."
     ],
     image: "",
     links: [
@@ -22,15 +22,15 @@ export const projects: Project[] = [
     title: "ForkScore",
     stack: ["ASP.NET Core MVC", "C#", "SQL Server", "Swagger", "Razor Views"],
     summary:
-      "Restaurant pages & reviews with role-based access, secure auth, well-tested REST APIs, and Google Maps API integration.",
+      "Restaurant pages & reviews web app. Features include role-based access, secure auth, well-tested REST APIs, and Google Maps API integration.",
     bullets: [
-      "Desgined REST APIs with complex types; tested via Swagger/Postman.",
+      "Designed REST APIs with complex types; tested via Swagger/Postman.",
       "Implemented secure auth: login, registration, MFA, encrypted sensitive information.",
       "Dynamic UI with Razor; SQL stored procedures for pesistence."
     ],
     image: "",
     links: [
-      { label: "Live", href: "https://cis-iis2.temple.edu/Spring2025/CIS3342_tun32527/TermProject/Restaurant/SearchRestaurants"},
+      { label: "Live", href: "https://cis-iis2.temple.edu/Spring2025/CIS3342_tun32527/TermProject"},
       { label: "Github - not yet public", href: ""}
     ]
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     summary:
       "Personal portfolio built with Next.js App Router and TypeScript. Modular component system with typed data, dark mode, SEO metadata, and fast deployments via Vercel.",
     bullets: [
-      "Modular components + typed data sources (projects/site) with path aliases.",
+      "Modular components + typed data sources  with path aliases.",
       "App Router layouts/pages, server components, image optimization, and prefetching.",
       "CI/CD on Vercel with custom domain, accessible semantics, and responsive design."
     ],

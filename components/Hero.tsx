@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import {site} from "@/data/site"
+import { site } from "@/data/site";
 
-export default function Hero(){
+export default function Hero() {
   return (
     <div className="flex items-start gap-6">
       {/* Avatar (optional)*/}
@@ -26,7 +26,7 @@ export default function Hero(){
           workflows, and deploy to the cloud with a focus on maintainability.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-3">
+        {/* <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/about"
             className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ring-1 ring-black/15 dark:ring-white/20 hover:bg-black/5 dark:hover:bg-white/5 transition"
@@ -59,7 +59,7 @@ export default function Hero(){
           >
             Contact
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

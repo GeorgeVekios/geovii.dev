@@ -15,9 +15,6 @@ export default function Home() {
         <div className="mt-6">
           <Highlights items={site.highlights} />
         </div>
-        <div className="mt-4">
-          <SocialLinks />
-        </div>
       </Section>
 
       <Section
