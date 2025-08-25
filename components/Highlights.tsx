@@ -2,7 +2,7 @@ type Props = { items:string[] };
 
 export default function Highlights({items }: Props) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 justify-center">
       {items.map((chip) => (
         <span
           key={chip}
