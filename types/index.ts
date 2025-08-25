@@ -20,3 +20,10 @@ export type Experience = {
   link?: string;
   bullets: string[];
 };
+
+export type AboutContent = {
+  avatar?: string;
+  intro: string[]; //bullets
+  strengths: string[]; //bullets
+  learning: string[]; //bullets
+};
