@@ -22,8 +22,8 @@ export default function Hero() {
           {site.name}
         </h1>
         <p className="mt-3 text-base sm:text-lg text-black/70 dark:text-white/70 max-w-2xl">
-          {site.tagline} Temple IST '25. I ship full-stack apps, automate real
-          workflows, and deploy to the cloud with a focus on maintainability.
+          {site.tagline} Temple IST '25. Shipping full-stack apps, automating real
+          workflows, and deploying to the cloud with a focus on maintainability.
         </p>
 
         {/* <div className="mt-6 flex flex-wrap gap-3">

@@ -9,6 +9,6 @@ export const site = {
   highlights: [
     "ASP.NET Core • React • SQL",
     "AWS & Azure deployments",
-    "Automation + DevOps mindset",
+    "Automation Workflows",
   ],
 }

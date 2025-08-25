@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import Hero from "@/components/Hero";
 import Highlights from "@/components/Highlights";
-import SocialLinks from "@/components/SocialLinks";
+//import SocialLinks from "@/components/SocialLinks";
 import ProjectsGrid from "@/components/ProjectGrid";
 import { projects } from "@/data/projects";
 import { site } from "@/data/site";
