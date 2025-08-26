@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: Props) {
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
       whileHover={{ y: -8 }}
       whileTap={{ y: -1 }}
       className="group rounded-2xl ring-1 ring-black/10 dark:ring-white/10
