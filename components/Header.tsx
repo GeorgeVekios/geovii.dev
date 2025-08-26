@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { site } from "@/data/site";
 import {usePathname} from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links =[
   {href: "/about", label: "About"},
@@ -30,6 +31,7 @@ export default function Header(){
             );
           })}
         </nav>
+        <ThemeToggle />
       </div>
     </header>
   )
