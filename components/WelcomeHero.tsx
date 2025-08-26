@@ -6,7 +6,7 @@ import { MotionButton } from "@/components/MotionButton";
 
 export default function WelcomeHero() {
   return (
-    <section className="min-h-[70vh] sm:min-h-[80vh] flex items-center">
+    <section className="min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center">
       <FadeIn>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight">
