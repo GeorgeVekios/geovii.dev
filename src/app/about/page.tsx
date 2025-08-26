@@ -10,21 +10,21 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <Section title="About">
-      {/* Centered avatar + intro */}
+      {/* centered avatar + intro */}
       <AboutHeader data={about} />
 
-      {/* Full-width Education card ABOVE the grid */}
+      {/* full-width education card above grid */}
       {about.education && <EducationCard items={about.education} />}
 
-      {/* Grid of two cards below */}
+      {/* two card grid */}
       <SkillsGrid strengths={about.strengths} learning={about.learning} />
 
-      {/* Highlights centered */}
+      {/* highlights centered */}
       <div className="mt-8 flex justify-center">
         <Highlights items={site.highlights} />
       </div>
 
-      {/* Resume CTA centered */}
+      {/* resume centered */}
       <div className="mt-8 flex justify-center">
         <Link
           href={site.resumePath}
@@ -34,7 +34,7 @@ export default function AboutPage() {
                      ring-1 ring-black/15 dark:ring-white/20
                      hover:bg-black/5 dark:hover:bg-white/5 transition"
         >
-          Download Résumé
+          Download Resume
         </Link>
       </div>
     </Section>
