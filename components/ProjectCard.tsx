@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Project } from "@/types";
 
 type Props = { project: Project };
@@ -7,7 +10,16 @@ export default function ProjectCard({ project }: Props) {
   const { title, stack, summary, bullets, image, links } = project;
 
   return (
-    <li className="group rounded-2xl ring-1 ring-black/10 dark:ring-white/10 hover:ring-black/20 dark:hover:ring-white/20 transition overflow-hidden">
+    <motion.li
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
+      whileHover={{ y: -8 }}
+      whileTap={{ y: -1 }}
+      className="group rounded-2xl ring-1 ring-black/10 dark:ring-white/10
+                 hover:ring-black/20 dark:hover:ring-white/20 transition overflow-hidden"
+    >
       {image ? (
         <div className="relative h-44 w-full bg-black/5 dark:bg-white/5">
           <Image
@@ -55,6 +67,6 @@ export default function ProjectCard({ project }: Props) {
           </div>
         )}
       </div>
-    </li>
+    </motion.li>
   );
 }
