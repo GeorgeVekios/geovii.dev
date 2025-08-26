@@ -1,11 +1,13 @@
 import Card from "@/components/Card";
 import { EducationItem } from "@/types";
+import FadeIn from "@/components/FadeIn";
 
 export default function EducationCard({ items }: { items: EducationItem[] }) {
   if (!items?.length) return null;
 
   return (
     <div className="mt-8 max-w-5xl mx-auto">
+      <FadeIn delay={0.50}>
       <Card className="p-0">
         {/* Section header */}
         <div className="px-4 sm:px-5 py-4 border-b border-black/10 dark:border-white/10">
@@ -65,6 +67,7 @@ export default function EducationCard({ items }: { items: EducationItem[] }) {
           ))}
         </ul>
       </Card>
+      </FadeIn>
     </div>
   );
 }
