@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { site } from "@/data/site";
+import FadeIn from "@/components/FadeIn";
+
+
 
 export default function WelcomeHero() {
   return (
     <section className="min-h-[70vh] sm:min-h-[80vh] flex items-center">
+      <FadeIn>
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight">
           <span className="block">Hello, I’m {site.name.split(" ")[0]}.</span>
@@ -45,6 +49,7 @@ export default function WelcomeHero() {
           <ArrowDown className="h-5 w-5" />
         </a>
       </div>
+      </FadeIn>
     </section>
   );
 }

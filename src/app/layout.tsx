@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <MotionProvider>
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1 px-6 sm:px-10 lg:px-16 py-10">
@@ -37,6 +39,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>
