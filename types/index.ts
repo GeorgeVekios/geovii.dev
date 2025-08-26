@@ -21,9 +21,18 @@ export type Experience = {
   bullets: string[];
 };
 
+export type EducationItem = {
+  school: string;
+  degree: string;
+  end: string;
+  location?: string;
+  bullets?: string[];
+}
+
 export type AboutContent = {
   avatar?: string;
   intro: string[]; //bullets
   strengths: string[]; //bullets
   learning: string[]; //bullets
+  education: EducationItem[];
 };

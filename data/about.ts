@@ -18,4 +18,16 @@ export const about: AboutContent = {
     "Angular fundamentals",
     "Golang for application backends"
   ],
+  education:[
+    {
+      school: "Temple University",
+      degree: "B.S. Information Science & Technology • Certificate in Computer Security and Digital Forensics",
+      end: "Dec 2025",
+      location: "Philadelphia, PA",
+      bullets: [
+        "GPA 3.62/4.0, Dean's List 2025",
+        "Relevant coursework: Data Structures, Database Management, Microservice Architecture, Network Architectures, Client-Side Web Scripting, Server-Side Web App Development, Software Security, Digital Forensics"
+      ]
+    }
+  ]
 };
