@@ -36,7 +36,7 @@ export default function AboutIntro({ data }: { data: AboutContent }) {
       <div className="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
         <Card>
           <h3 className="text-base sm:text-lg font-semibold">
-            What I'm Good At
+            What I&#39;m Good At
           </h3>
           <ul className="mt-3 space-y-1.5 text-sm text-left text-black/75 dark:text-white/75">
             {strengths.map((s) => (
