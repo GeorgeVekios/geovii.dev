@@ -7,6 +7,7 @@ import { site } from "@/data/site";
 import { about } from "@/data/about";
 import Link from "next/link";
 import { MotionButton } from "@/components/MotionButton";
+import FadeIn from "@/components/FadeIn";
 
 export default function AboutPage() {
   return (
@@ -21,14 +22,18 @@ export default function AboutPage() {
       <SkillsGrid strengths={about.strengths} learning={about.learning} />
 
       {/* highlights centered */}
-      <div className="mt-8 flex justify-center">
-        <Highlights items={site.highlights} />
-      </div>
+      <FadeIn delay={0.90}>
+        <div className="mt-8 flex justify-center">
+          <Highlights items={site.highlights} />
+        </div>
+      </FadeIn>
 
       {/* resume centered */}
+      <FadeIn delay={0.95}>
       <div className="mt-8 flex justify-center">
         <MotionButton href={site.resumePath}>View Resume</MotionButton>
       </div>
+      </FadeIn>
     </Section>
   );
 }
