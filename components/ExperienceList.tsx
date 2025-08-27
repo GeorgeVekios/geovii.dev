@@ -8,7 +8,7 @@ export default function ExperienceList({ items }: { items: Experience[] }) {
         <ExperienceItem
           key={`${e.company}-${e.start}-${i}`}
           item={e}
-          delay={i * 0.25} // staggered entrance
+          delay={i * 0.35} // staggered entrance
         />
       ))}
     </ul>
