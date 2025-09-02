@@ -2,7 +2,7 @@
 import { Experience } from "@/types";
 import { motion } from "framer-motion";
 
-type Props = { item: Experience; delay?: number }; // ⬅️ optional stagger
+type Props = { item: Experience; delay?: number }; // optional stagger
 
 export default function ExperienceItem({ item, delay = 0 }: Props) {
   const { company, role, team, start, end, bullets, link } = item;

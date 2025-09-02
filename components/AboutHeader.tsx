@@ -6,7 +6,7 @@ export default function AboutHeader({ data }: { data: AboutContent }) {
   const { avatar, intro } = data;
 
   return (
-    <FadeIn> {/* subtle entrance for the header block */}
+    <FadeIn mode="mount"> {}
       <div className="max-w-3xl mx-auto text-center">
         {avatar && (
           <FadeIn delay={0.10}>

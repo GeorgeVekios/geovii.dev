@@ -7,7 +7,7 @@ export default function SkillsGrid({
 }: { strengths: string[]; learning: string[] }) {
   return (
     <div className="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 max-w-5xl mx-auto">
-      <FadeIn delay={0.75}>
+      <FadeIn delay={0.50}>
         <Card>
           <h3 className="text-base sm:text-lg font-semibold">What I’m good at</h3>
           <ul className="mt-3 space-y-1.5 text-sm text-left text-black/75 dark:text-white/75">
@@ -16,7 +16,7 @@ export default function SkillsGrid({
         </Card>
       </FadeIn>
 
-      <FadeIn delay={0.80}>
+      <FadeIn delay={0.70}>
         <Card>
           <h3 className="text-base sm:text-lg font-semibold">Currently learning</h3>
           <ul className="mt-3 space-y-1.5 text-sm text-left text-black/75 dark:text-white/75">
