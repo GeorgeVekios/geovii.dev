@@ -22,7 +22,7 @@ export default function Hero() {
           {site.name}
         </h1>
         <p className="mt-3 text-base sm:text-lg text-black/70 dark:text-white/70 max-w-2xl">
-          {site.tagline} Temple IST '25. Shipping full-stack apps, automating real
+          {site.tagline} Temple IST &379;25. Shipping full-stack apps, automating real
           workflows, and deploying to the cloud with a focus on maintainability.
         </p>
 
