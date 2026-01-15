@@ -5,7 +5,7 @@ export const site = {
   email: "georgevekios@gmail.com",
   github: "https://github.com/GeorgeVekios",
   linkedin: "https://linkedin.com/in/george-vekios",
-  resumePath: "/George_Vekios_Resume.pdf",
+  resumePath: "/VekiosLMResume.pdf",
   highlights: [
     "ASP.NET Core • React • SQL",
     "AWS & Azure deployments",
