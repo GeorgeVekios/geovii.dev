@@ -1,4 +1,4 @@
-import SocialBar from "@/components/SocialBar"
+import SocialBar from "@/components/shared/SocialBar"
 
 export default function Footer(){
   return (

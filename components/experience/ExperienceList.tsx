@@ -1,5 +1,5 @@
 import { Experience } from "@/types";
-import ExperienceItem from "@/components/ExperienceItem";
+import ExperienceItem from "@/components/experience/ExperienceItem";
 
 export default function ExperienceList({ items }: { items: Experience[] }) {
   return (

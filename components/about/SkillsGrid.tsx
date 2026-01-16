@@ -1,5 +1,5 @@
-import Card from "@/components/Card";
-import FadeIn from "@/components/FadeIn"; // ⬅️ add
+import Card from "@/components/ui/Card";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function SkillsGrid({
   strengths,

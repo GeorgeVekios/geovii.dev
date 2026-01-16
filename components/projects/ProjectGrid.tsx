@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/projects/ProjectCard";
 import { Project } from "@/types";
 
 const parent = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };

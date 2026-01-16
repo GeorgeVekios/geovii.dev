@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { site } from "@/data/site";
 import {usePathname} from "next/navigation";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const links =[
   {href: "/about", label: "About"},

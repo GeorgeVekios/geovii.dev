@@ -1,5 +1,5 @@
-import Section from "@/components/Section";
-import SocialLinks from "@/components/SocialLinks";
+import Section from "@/components/layout/Section";
+import SocialLinks from "@/components/shared/SocialLinks";
 import { site } from "@/data/site";
 
 export default function ContactPage() {

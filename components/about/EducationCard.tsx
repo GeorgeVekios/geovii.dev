@@ -1,6 +1,6 @@
-import Card from "@/components/Card";
+import Card from "@/components/ui/Card";
 import { EducationItem } from "@/types";
-import FadeIn from "@/components/FadeIn";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function EducationCard({ items }: { items: EducationItem[] }) {
   if (!items?.length) return null;

@@ -1,5 +1,5 @@
-import Section from "@/components/Section";
-import ExperienceList from "@/components/ExperienceList";
+import Section from "@/components/layout/Section";
+import ExperienceList from "@/components/experience/ExperienceList";
 import { experience } from "@/data/experience";
 
 export default function ExperiencePage() {

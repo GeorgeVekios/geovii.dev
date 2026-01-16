@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { AboutContent } from "@/types";
-import FadeIn from "@/components/FadeIn"; // ⬅️ add
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function AboutHeader({ data }: { data: AboutContent }) {
   const { avatar, intro } = data;

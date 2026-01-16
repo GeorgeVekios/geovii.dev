@@ -1,13 +1,13 @@
-import Section from "@/components/Section";
-import Highlights from "@/components/Highlights";
-import AboutHeader from "@/components/AboutHeader";
-import EducationCard from "@/components/EducationCard";
-import SkillsGrid from "@/components/SkillsGrid";
+import Section from "@/components/layout/Section";
+import Highlights from "@/components/home/Highlights";
+import AboutHeader from "@/components/about/AboutHeader";
+import EducationCard from "@/components/about/EducationCard";
+import SkillsGrid from "@/components/about/SkillsGrid";
 import { site } from "@/data/site";
 import { about } from "@/data/about";
 import Link from "next/link";
-import { MotionButton } from "@/components/MotionButton";
-import FadeIn from "@/components/FadeIn";
+import { MotionButton } from "@/components/ui/MotionButton";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function AboutPage() {
   return (

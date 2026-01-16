@@ -1,6 +1,6 @@
-import WelcomeHero from "@/components/WelcomeHero";
-import Section from "@/components/Section";
-import ProjectsGrid from "@/components/ProjectGrid";
+import WelcomeHero from "@/components/home/WelcomeHero";
+import Section from "@/components/layout/Section";
+import ProjectsGrid from "@/components/projects/ProjectGrid";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 

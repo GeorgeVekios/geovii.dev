@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { site } from "@/data/site";
-import FadeIn from "@/components/FadeIn";
-import { MotionButton } from "@/components/MotionButton";
+import FadeIn from "@/components/ui/FadeIn";
+import { MotionButton } from "@/components/ui/MotionButton";
 
 export default function WelcomeHero() {
   return (
