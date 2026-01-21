@@ -21,18 +21,18 @@ export default function Section({
       className={`max-w-5xl mx-auto scroll-mt-24 ${className ?? ""}`}
     >
       {(title || right) && (
-        <div className="flex items-baseline justify-between">
+        <div className="flex items-baseline justify-between mb-6">
           {title ? (
             <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
-              {title}
+              <span className="text-accent">/</span> {title}
             </h2>
           ) : (
             <span />
           )}
-          {right ?? null}
+          {right && <span className="text-sm text-muted hover:text-accent transition-colors">{right}</span>}
         </div>
       )}
-      <div className={title ? "mt-6" : ""}>{children}</div>
+      <div>{children}</div>
     </section>
   );
 }

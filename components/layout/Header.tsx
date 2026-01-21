@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { site } from "@/data/site";
 import {usePathname} from "next/navigation";
-import ThemeToggle from "@/components/ui/ThemeToggle";
+import ThemePicker from "@/components/ui/ThemePicker";
 
 const links =[
   {href: "/about", label: "About"},
@@ -14,24 +14,30 @@ const links =[
 export default function Header(){
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30 border-b border-black/10 dark:border-white/10">
+    <header className="sticky top-0 z-30 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 h-14 flex items-center justify-between">
-        <Link href = "/" className="font-semibold tracking-tight">{site.headerName}</Link>
-        <nav className="flex gap-5 text-sm">
+        <Link href="/" className="font-semibold tracking-tight text-accent hover:text-accent-hover transition-colors">
+          {site.headerName}
+        </Link>
+        <nav className="flex gap-6 text-sm">
           {links.map(({href, label}) => {
             const active = pathname === href;
             return(
               <Link
                 key={href}
                 href={href}
-                className={active ? "underline underline-offset-4" : "hover:underline-offset-4"}
-                >
-                  {label}
-                </Link>
+                className={`transition-colors ${
+                  active
+                    ? "text-accent font-medium"
+                    : "text-muted hover:text-foreground"
+                }`}
+              >
+                {label}
+              </Link>
             );
           })}
         </nav>
-        <ThemeToggle />
+        <ThemePicker />
       </div>
     </header>
   )

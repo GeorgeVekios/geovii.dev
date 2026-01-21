@@ -21,15 +21,15 @@ export default function ExperienceItem({ item, delay = 0 }: Props) {
         <div>
           <h3 className="text-base sm:text-lg font-semibold">
             {role}
-            {team ? ` — ${team}` : ""}
+            {team ? <span className="text-accent font-normal"> — {team}</span> : ""}
           </h3>
-          <p className="text-sm text-black/60 dark:text-white/60">
+          <p className="text-sm text-muted">
             {link ? (
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline underline-offset-4"
+                className="hover:text-accent transition-colors"
               >
                 {company}
               </a>
@@ -38,25 +38,27 @@ export default function ExperienceItem({ item, delay = 0 }: Props) {
             )}
           </p>
         </div>
-        <div className="text-sm text-black/60 dark:text-white/60">
+        <div className="text-sm text-muted tabular-nums">
           {start} – {end}
         </div>
       </header>
 
       <ul className="mt-3 space-y-1.5">
         {bullets.map((b, i) => (
-          <li key={i} className="text-sm text-black/75 dark:text-white/75">
-            • {b}
+          <li key={i} className="text-sm text-muted">
+            <span className="text-accent mr-1">›</span> {b}
           </li>
         ))}
       </ul>
     </>
   );
 
+  const itemStyles = "rounded-xl bg-surface border border-border p-4 sm:p-5";
+
   //before hydration, return a plain <li> so it renders immediately
   if (!mounted) {
     return (
-      <li className="rounded-2xl ring-1 ring-black/10 dark:ring-white/10 p-4 sm:p-5">
+      <li className={itemStyles}>
         {content}
       </li>
     );
@@ -69,7 +71,7 @@ export default function ExperienceItem({ item, delay = 0 }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={transition}
-      className="rounded-2xl ring-1 ring-black/10 dark:ring-white/10 p-4 sm:p-5"
+      className={itemStyles}
     >
       {content}
     </motion.li>

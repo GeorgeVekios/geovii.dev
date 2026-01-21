@@ -1,24 +1,200 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme="vscode"], [data-theme="cyberspace"], [data-theme="8008"], [data-theme="aether"], [data-theme="dark-magic-girl"], [data-theme="vscode"] *, [data-theme="cyberspace"] *, [data-theme="8008"] *, [data-theme="aether"] *, [data-theme="dark-magic-girl"] *));
 
+/* ===== THEME DEFINITIONS ===== */
+
+/* Default / Fallback - VSCode Dark */
 :root {
-  /* light tokens by default */
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1e1e1e;
+  --foreground: #d4d4d4;
+  --surface: #252526;
+  --surface-hover: #2d2d30;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --muted: rgba(212, 212, 212, 0.6);
+  --accent: #569cd6;
+  --accent-hover: #9cdcfe;
+  --accent-muted: rgba(86, 156, 214, 0.15);
+  --dot-1: #569cd6;
+  --dot-2: #1e1e1e;
+  --dot-3: #d4d4d4;
+  color-scheme: dark;
+}
+
+/* VSCode - Classic IDE dark */
+[data-theme="vscode"] {
+  --background: #1e1e1e;
+  --foreground: #d4d4d4;
+  --surface: #252526;
+  --surface-hover: #2d2d30;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --muted: rgba(212, 212, 212, 0.6);
+  --accent: #569cd6;
+  --accent-hover: #9cdcfe;
+  --accent-muted: rgba(86, 156, 214, 0.15);
+  --dot-1: #569cd6;
+  --dot-2: #1e1e1e;
+  --dot-3: #d4d4d4;
+  color-scheme: dark;
+}
+
+/* Cyberspace - Neon green on dark */
+[data-theme="cyberspace"] {
+  --background: #101820;
+  --foreground: #d0d0d0;
+  --surface: #1a2634;
+  --surface-hover: #243447;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(0, 255, 136, 0.3);
+  --muted: rgba(208, 208, 208, 0.6);
+  --accent: #00ff88;
+  --accent-hover: #7dffbc;
+  --accent-muted: rgba(0, 255, 136, 0.15);
+  --dot-1: #7dffbc;
+  --dot-2: #00ff88;
+  --dot-3: #c9abff;
+  color-scheme: dark;
+}
+
+/* 8008 - Retro pink/gray */
+[data-theme="8008"] {
+  --background: #2d2d2d;
+  --foreground: #e8e8e8;
+  --surface: #3a3a3a;
+  --surface-hover: #4a4a4a;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(248, 159, 175, 0.4);
+  --muted: rgba(232, 232, 232, 0.6);
+  --accent: #f89faf;
+  --accent-hover: #fcc5cf;
+  --accent-muted: rgba(248, 159, 175, 0.15);
+  --dot-1: #939eae;
+  --dot-2: #f89faf;
+  --dot-3: #2d2d2d;
+  color-scheme: dark;
+}
+
+/* Aether - Purple/lavender dark */
+[data-theme="aether"] {
+  --background: #1a1b26;
+  --foreground: #c0caf5;
+  --surface: #24283b;
+  --surface-hover: #2f3549;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(187, 154, 247, 0.3);
+  --muted: rgba(192, 202, 245, 0.6);
+  --accent: #bb9af7;
+  --accent-hover: #d4bfff;
+  --accent-muted: rgba(187, 154, 247, 0.15);
+  --dot-1: #7aa2f7;
+  --dot-2: #1a1b26;
+  --dot-3: #e0d0ff;
+  color-scheme: dark;
+}
+
+/* Dark Magic Girl - Deep purple/pink */
+[data-theme="dark-magic-girl"] {
+  --background: #1e1432;
+  --foreground: #f5e6ff;
+  --surface: #2a1f42;
+  --surface-hover: #3a2d55;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 119, 168, 0.3);
+  --muted: rgba(245, 230, 255, 0.6);
+  --accent: #ff77a8;
+  --accent-hover: #ffaac8;
+  --accent-muted: rgba(255, 119, 168, 0.15);
+  --dot-1: #f5e6ff;
+  --dot-2: #ff77a8;
+  --dot-3: #1e1432;
+  color-scheme: dark;
+}
+
+/* Bento - Warm orange/cream (light) */
+[data-theme="bento"] {
+  --background: #f8f5f1;
+  --foreground: #2d2424;
+  --surface: #ffffff;
+  --surface-hover: #f0ebe5;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(255, 147, 79, 0.4);
+  --muted: rgba(45, 36, 36, 0.6);
+  --accent: #ff934f;
+  --accent-hover: #e87a35;
+  --accent-muted: rgba(255, 147, 79, 0.12);
+  --dot-1: #829aab;
+  --dot-2: #ff934f;
+  --dot-3: #f0d1b9;
   color-scheme: light;
 }
 
-/* dark tokens when .dark is on <html> */
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  color-scheme: dark;
+/* Milkshake - Soft pastel blue (light) */
+[data-theme="milkshake"] {
+  --background: #f0f4f8;
+  --foreground: #2e3440;
+  --surface: #ffffff;
+  --surface-hover: #e8eef4;
+  --border: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(100, 149, 237, 0.3);
+  --muted: rgba(46, 52, 64, 0.6);
+  --accent: #6495ed;
+  --accent-hover: #4a7fd6;
+  --accent-muted: rgba(100, 149, 237, 0.12);
+  --dot-1: #b8d4e8;
+  --dot-2: #2e3440;
+  --dot-3: #6495ed;
+  color-scheme: light;
+}
+
+/* Thai Tea - Warm orange/brown (light) */
+[data-theme="thai-tea"] {
+  --background: #faf6f0;
+  --foreground: #3d3022;
+  --surface: #ffffff;
+  --surface-hover: #f5ede0;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(204, 136, 51, 0.4);
+  --muted: rgba(61, 48, 34, 0.6);
+  --accent: #cc8833;
+  --accent-hover: #b5762b;
+  --accent-muted: rgba(204, 136, 51, 0.12);
+  --dot-1: #cc8833;
+  --dot-2: #cc8833;
+  --dot-3: #cc8833;
+  color-scheme: light;
+}
+
+/* Darling - Soft pink/white (light) */
+[data-theme="darling"] {
+  --background: #fdf6f6;
+  --foreground: #4a3c3c;
+  --surface: #ffffff;
+  --surface-hover: #fceef0;
+  --border: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(183, 65, 91, 0.3);
+  --muted: rgba(74, 60, 60, 0.6);
+  --accent: #b7415b;
+  --accent-hover: #9c3349;
+  --accent-muted: rgba(183, 65, 91, 0.12);
+  --dot-1: #fceef0;
+  --dot-2: #b7415b;
+  --dot-3: #fdf6f6;
+  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -26,5 +202,22 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Accent link styling */
+a.accent-link {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+a.accent-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Glow effect for accent elements */
+.accent-glow {
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.15);
+}
+.dark .accent-glow {
+  box-shadow: 0 0 30px rgba(45, 212, 191, 0.2);
 }

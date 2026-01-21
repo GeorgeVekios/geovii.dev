@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MotionProvider from "@/components/shared/MotionProvider";
-import PageTransition from "@/components/layout/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <MotionProvider>
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`} data-theme="vscode">
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <MotionProvider>
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1 px-6 sm:px-10 lg:px-16 py-10">
@@ -40,8 +37,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          </MotionProvider>
-        </ThemeProvider>
+        </MotionProvider>
       </body>
     </html>
   );

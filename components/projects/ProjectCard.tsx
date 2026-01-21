@@ -20,30 +20,30 @@ export default function ProjectCard({ project }: Props) {
   const content = (
     <>
       {image ? (
-        <div className="relative h-44 w-full bg-black/5 dark:bg-white/5">
+        <div className="relative h-44 w-full bg-surface-hover">
           <Image
             src={image}
             alt=""
             fill
-            sizes="(max-width: 640px) 100vw, 50vw" 
+            sizes="(max-width: 640px) 100vw, 50vw"
             className="object-cover"
           />
         </div>
       ) : null}
 
       <div className="p-4 sm:p-5">
-        <h3 className="text-base sm:text-lg font-semibold">{title}</h3>
+        <h3 className="text-base sm:text-lg font-semibold group-hover:text-accent transition-colors">{title}</h3>
 
-        <p className="mt-1 text-xs sm:text-sm text-black/60 dark:text-white/60">
-          {stack.join(" • ")}
+        <p className="mt-1 text-xs sm:text-sm text-accent/80">
+          {stack.join(" · ")}
         </p>
 
-        <p className="mt-3 text-sm text-black/75 dark:text-white/75">{summary}</p>
+        <p className="mt-3 text-sm text-muted">{summary}</p>
 
         <ul className="mt-3 space-y-1.5">
           {bullets.map((b) => (
-            <li key={b} className="text-sm text-black/75 dark:text-white/75">
-              • {b}
+            <li key={b} className="text-sm text-muted">
+              <span className="text-accent mr-1">›</span> {b}
             </li>
           ))}
         </ul>
@@ -56,9 +56,9 @@ export default function ProjectCard({ project }: Props) {
                 href={l.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium underline underline-offset-4 hover:opacity-80"
+                className="text-sm font-medium text-accent hover:text-accent-hover transition-colors"
               >
-                {l.label}
+                {l.label} →
               </a>
             ))}
           </div>
@@ -67,10 +67,12 @@ export default function ProjectCard({ project }: Props) {
     </>
   );
 
+  const cardStyles = "group rounded-xl bg-surface border border-border hover:border-accent/30 transition-all overflow-hidden";
+
   //before hydration, plain <li> so nothing is hidden
   if (!mounted) {
     return (
-      <li className="group rounded-2xl ring-1 ring-black/10 dark:ring-white/10 hover:ring-black/20 dark:hover:ring-white/20 transition overflow-hidden">
+      <li className={cardStyles}>
         {content}
       </li>
     );
@@ -83,9 +85,9 @@ export default function ProjectCard({ project }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={transition}
-      whileHover={{ y: -8 }}
+      whileHover={{ y: -6 }}
       whileTap={{ y: -1 }}
-      className="group rounded-2xl ring-1 ring-black/10 dark:ring-white/10 hover:ring-black/20 dark:hover:ring-white/20 transition overflow-hidden"
+      className={cardStyles}
     >
       {content}
     </motion.li>
