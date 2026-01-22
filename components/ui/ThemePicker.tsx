@@ -80,11 +80,11 @@ export default function ThemePicker() {
       {/* Trigger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-border hover:border-accent/50 transition-colors"
+        className="flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 rounded-lg border border-border hover:border-accent/50 transition-colors"
         aria-label="Select theme"
       >
         <Shuffle className="h-3.5 w-3.5 text-muted" />
-        <span className="text-xs font-mono text-muted">{current.name}</span>
+        <span className="hidden sm:inline text-xs font-mono text-muted">{current.name}</span>
         <ThemeDots dots={current.dots} />
       </button>
 
