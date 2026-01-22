@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "George Vekios - Portfolio",
   description:
     "Full-stack developer focused on clean UIs, reliable APIs, and practical cloud deployments.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
