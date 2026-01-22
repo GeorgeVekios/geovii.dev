@@ -5,7 +5,6 @@ import EducationCard from "@/components/about/EducationCard";
 import SkillsGrid from "@/components/about/SkillsGrid";
 import { site } from "@/data/site";
 import { about } from "@/data/about";
-import Link from "next/link";
 import { MotionButton } from "@/components/ui/MotionButton";
 import FadeIn from "@/components/ui/FadeIn";
 
