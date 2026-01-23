@@ -13,13 +13,13 @@ export default function WelcomeHero() {
               Hey, I&apos;m <span className="text-accent">{site.name.split(" ")[0]}</span>.
             </span>
             <span className="mt-2 block text-3xl sm:text-4xl font-medium text-muted">
-              Full-stack developer & cloud enthusiast
+              Full-Stack Developer building Cloud Solutions and exploring AI-Driven Development.
             </span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-muted max-w-2xl mx-auto">
             I build reliable apps, automate workflows, and deploy to the cloud.
-            Currently working at <span className="text-foreground font-medium">RSM</span> on Microsoft 365 solutions.
+            Currently at <span className="text-foreground font-medium">RSM</span> working on M365 solutions and AI-oriented pipelines. Personally exploring AI-powered development.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
